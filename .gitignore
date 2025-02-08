@@ -1,0 +1,51 @@
+# Compiled DLL files
+*.dll
+*.exe
+
+# F# compiler files
+*.fs.suo
+*.fs.user
+*.suo
+*.user
+
+# Mono auto generated files
+mono_crash.*
+
+# Build directories
+bin/
+obj/
+
+# Paket dependencies
+.paket/paket.exe
+.paket/paket.targets
+
+# Paket dependencies folder
+packages/
+
+# Dotnet artifacts
+*.pdb
+*.cache
+*.config
+*.csproj.user
+
+# Other temporary files
+*.log
+*.tmp
+*.vs
+.vscode
+*.userprefs
+
+# Rider project files
+.idea/
+
+# Ignore node modules
+node_modules/
+
+# Ignore compiled Java files
+*.class
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore test results
+TestResults/
