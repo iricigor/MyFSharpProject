@@ -4,6 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="*.fs" />
+    <Compile Include="MyWebFunctions.fs" />
+    <Compile Include="HelloWorld.fs" />  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.72" />
   </ItemGroup>
 </Project>
