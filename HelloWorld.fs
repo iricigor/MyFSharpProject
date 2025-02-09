@@ -24,18 +24,9 @@ let main argv =
     // Print the length of the content
     printfn "\nLength of the web page content: %d characters" content.Length
 
-    // Load HTML into HtmlDocument
-    let doc = new HtmlDocument()
-    doc.LoadHtml(content)
+    let urlsAndHtml = extractUrls(content)
 
-    // Select all <div class="art"> elements using XPath
-    let nodes = doc.DocumentNode.SelectNodes("//div[@class='art  ']")
-
-    // Print the index and the href attribute of each <a> element inside the selected nodes
-    for i in 0 .. nodes.Count - 1 do
-        let node = nodes.[i]
-        let aTag = node.SelectSingleNode(".//a[@href]")
-        if aTag <> null then
-            printfn "%d: %s" (i + 1) (aTag.GetAttributeValue("href", ""))
+    // Print the URLs and inner HTML
+    urlsAndHtml |> List.iter (fun (url, innerHtml) -> printfn "URL: %s\nInner HTML: %s\n" url innerHtml)
 
     0 // return an integer exit code

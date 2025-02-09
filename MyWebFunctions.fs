@@ -29,7 +29,7 @@ let extractUrls (html: string) : (string * string) list =
     doc.LoadHtml(html)
 
     // Select all <div class="art"> elements using XPath
-    let nodes = doc.DocumentNode.SelectNodes("//div[@class='art']")
+    let nodes = doc.DocumentNode.SelectNodes("//div[@class='art  ']")
 
     // Extract the href attribute and inner HTML for each <a> element inside the selected nodes
     [
